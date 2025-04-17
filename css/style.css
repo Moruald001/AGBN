@@ -45,16 +45,17 @@ a {
 }
 
 .header-btnBloc-btn {
-  font-size: 1.2em;
+  font-size: 1.1em;
   position: relative;
   text-align: center;
   width: 12vw;
   height: 8vh;
-  padding: 3vh 1vw 0;
+  padding: 3vh 0 0;
   border-radius: 5vw;
   transition: all 0.3s ease;
   z-index: 10;
   background-color: var(--second-color);
+  animation: Pulse 2s infinite linear;
 }
 .header-btnBloc-btn::before {
   content: "";
@@ -120,6 +121,7 @@ a {
   padding: 0 15px;
   font-size: 1.2em;
   border: 1px solid black;
+  outline-color: gray;
 }
 
 .main-formInput textarea {
@@ -130,6 +132,7 @@ a {
   padding: 10px 15px;
   font-size: 1.2em;
   border: 1px solid black;
+  outline-color: gray;
 }
 .main-formRadios {
   display: flex;
@@ -182,4 +185,56 @@ a {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .header-btnBloc {
+    backdrop-filter: none;
+  }
+  .header-btnBloc-btn {
+    width: 25vw;
+  }
+
+  .main-form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-btnBloc {
+    backdrop-filter: none;
+  }
+  .header-btnBloc-btn {
+    width: 25vw;
+  }
+
+  .main-form {
+    width: 85%;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-btnBloc-btn {
+    font-size: 0.7em;
+    height: 6vh;
+    padding: 2vh 1vw 0;
+  }
+
+  .main-form {
+    background-size: contain;
+  }
+  .main-formInput label {
+    backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes Pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
 }
