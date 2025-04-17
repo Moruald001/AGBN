@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="svg/btn-svg.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Formulaire de chargement</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-btnBloc">
+        <a href="#form" class="header-btnBloc-btn">Ajouter un client</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <form action="" class="main-form" id="form">
+        <div class="main-formInput">
+          <label for="name">Nom du client</label>
+          <input type="text" name="name" id="name" placeholder="Nom" />
+        </div>
+        <div class="main-formInput">
+          <label for="number">Nombre de colis</label>
+          <input type="number" name="number" id="number" placeholder="0" />
+        </div>
+        <div class="main-formInput">
+          <label for="description">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            placeholder="Disposition des colis..."
+          ></textarea>
+        </div>
+        <div class="main-formInput">
+          <label for="contact">contact</label>
+          <input type="text" name="contact" id="contact" />
+        </div>
+        <div class="main-formRadios">
+          <div class="main-formRadios-radio">
+            <label for="status1">Liberer</label>
+            <input type="radio" name="status" id="status1" value="1" checked />
+          </div>
+          <div class="main-formRadios-radio">
+            <label for="status2">Garder</label>
+            <input type="radio" name="status" id="status2" value="0" />
+          </div>
+        </div>
+        <button type="submit" class="main-formBtn">Enregistrer</button>
+      </form>
+    </main>
+  </body>
+</html>

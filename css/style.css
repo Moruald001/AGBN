@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Capriola&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --first-color: black;
+  --second-color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "capriola", monospace;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--first-color);
+}
+
+/* header */
+
+.header {
+  background: no-repeat url(/img/agbanBG.png);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-btnBloc {
+  width: 40%;
+  height: 40%;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-btnBloc-btn {
+  font-size: 1.2em;
+  position: relative;
+  text-align: center;
+  width: 12vw;
+  height: 8vh;
+  padding: 3vh 1vw 0;
+  border-radius: 5vw;
+  transition: all 0.3s ease;
+  z-index: 10;
+  background-color: var(--second-color);
+}
+.header-btnBloc-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
+  height: 0;
+  background: var(--first-color);
+  transition: all 0.3s ease-in-out;
+  border-radius: 5vw;
+  z-index: -10;
+}
+.header-btnBloc-btn:hover::before {
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.header-btnBloc-btn:hover {
+  color: var(--second-color);
+}
+
+/* main */
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-form {
+  width: 50%;
+  height: 80%;
+  background: no-repeat url(/img/agbanBG.png);
+  background-size: cover;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  border-radius: 2vw;
+  box-shadow: -3px 3px 86px 25px rgba(0, 0, 0, 0.3);
+}
+
+.main-formInput {
+  display: flex;
+  flex-flow: column;
+  width: 80%;
+}
+
+.main-formInput label {
+  align-self: center;
+  margin-bottom: 2%;
+  font-size: 1.2em;
+}
+
+.main-formInput input {
+  height: 5vh;
+  border-radius: 1vw;
+  padding: 0 15px;
+  font-size: 1.2em;
+  border: 1px solid black;
+}
+
+.main-formInput textarea {
+  resize: none;
+  width: 100%;
+  height: 20vh;
+  border-radius: 1vw;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  border: 1px solid black;
+}
+.main-formRadios {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  gap: 10vw;
+}
+
+.main-formRadios-radio label {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.main-formRadios-radio input {
+  scale: 1.5;
+  filter: grayscale();
+}
+
+.main-formBtn {
+  position: relative;
+  width: 40%;
+  align-self: center;
+  height: 5vh;
+  border: 1px solid black;
+  border-radius: 1vw;
+  cursor: pointer;
+  background: none;
+  font-size: 1.2em;
+  transition: all 0.4s ease;
+  z-index: 10;
+}
+
+.main-formBtn:hover {
+  color: var(--second-color);
+}
+
+.main-formBtn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
+  height: 0;
+  background: var(--first-color);
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.9vw;
+  z-index: -10;
+}
+.main-formBtn:hover::before {
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
